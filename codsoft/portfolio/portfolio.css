@@ -1,0 +1,335 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light grayish blue */
+    color: #2d2d2d; /* Dark charcoal text */
+    scroll-behavior: smooth;
+  }
+  
+  /* Subtle Background Gradient */
+  section {
+    background: linear-gradient(135deg, #f4f7f6, #e0e0e0); /* Soft gray gradient */
+    padding: 100px 0;
+    color: #2d2d2d;
+  }
+  
+  /* Slide Animation */
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* New Zoom Animation */
+  @keyframes zoom-hover {
+    0% {
+      transform: scale(1);
+      box-shadow: none;
+    }
+    100% {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+    }
+  }
+  
+  /* Header and Navigation */
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #283747; /* Navy blue background */
+    z-index: 1000;
+    padding: 50px 0;
+    animation: slide-in 1s ease-out;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #f4f7f6; /* Light text */
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #d4af37; /* Gold hover effect */
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #e0e0e0, #f4f7f6); /* Subtle light gradient */
+    height: 100vh;
+    animation: fade-in 2s ease;
+  }
+  
+  .intro-text h1 {
+    font-size: 3em;
+    color: #283747; /* Navy blue for professionalism */
+    animation: slide-in 1s ease-out;
+  }
+  
+
+
+/* Profile Image with Border and Glowing Effect */
+.profile-image img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #1f7ea6; /* Elegant gold border */
+  transition: transform 1.5s ease, box-shadow 5.5s ease;
+  box-shadow: 0 0 20px rgba(17, 51, 76, 0.6), 0 0 40px rgba(0, 150, 255, 0.4), 0 0 60px rgba(0, 150, 255, 0.2); /* Glowing blue effect */
+}
+
+/* Hover Effect - Subtle Zoom and Enhanced Glow */
+.profile-image img:hover {
+  transform: scale(1.09);
+  box-shadow: 0 0 30px rgba(5, 25, 40, 0.7), 0 0 60px rgba(0, 255, 153, 0.5), 0 0 90px  rgba(35, 91, 108, 0.8); /* Stronger glow on hover */
+}
+
+/* Click (Active) Effect - Colored Shadow with Lightning Pulse */
+.profile-image img:active {
+  transform: scale(2.02); /* Slightly reduce the zoom */
+  box-shadow: 0 0 40px rgba(196, 212, 55, 0.8), 0 0 70px rgba(212, 175, 55, 0.6), 0 0 100px rgba(212, 175, 55, 0.4); /* Gold glow on click */
+}
+
+/* Animation for the Glowing Effect */
+@keyframes glow-pulse {
+  0% {
+      box-shadow: 0 0 20px rgba(22, 85, 79, 0.8), 0 0 40px rgba(0, 150, 255, 0.4), 0 0 60px rgba(0, 150, 255, 0.2);
+  }
+  50% {
+      box-shadow: 0 0 30px rgba(34, 100, 124, 0.8) 0 0 60px rgba(58, 137, 105, 0.5), 0 0 90px rgba(88, 58, 97, 0.3);
+  }
+  100% {
+      box-shadow: 0 0 20px  rgba(28, 68, 78, 0.8), 0 0 40px rgba(199, 58, 155, 0.4), 0 0 60px rgba(0, 150, 255, 0.2);
+  }
+}
+
+/* Apply the Animation to the Image */
+.profile-image img {
+  animation: glow-pulse 2s infinite ease-in-out;
+}
+
+  
+  
+  /* About Section */
+  /* About Section Styling */
+.about {
+  padding: 100px 0;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+}
+
+/* About Image on the Left */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 50px;
+}
+
+.about-image img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Hover Effect for the About Image */
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* About Content on the Right */
+.about-content {
+  flex: 1;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 2.5em;
+  color: #283747;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #2d2d2d;
+}
+
+  
+  /* Services Section */
+  .services {
+    text-align: center;
+    animation: slide-in 1.5s ease-out;
+  }
+  
+  .service-card {
+    margin: 20px;
+    display: inline-block;
+    width: 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    color: #283747;
+    border: 1px solid #d4af37; /* Subtle gold border */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+  }
+  
+  /* Projects Section */
+  .projects {
+    text-align: center;
+    animation: slide-in 1.5s ease-out;
+  }
+  
+  .project-cards {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #283747;
+    border: 1px solid #d4af37; /* Subtle gold border */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+  }
+  
+  .project-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card img:hover {
+    transform: scale(1.05); /* Subtle zoom effect on images */
+  }
+  
+  .view-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #283747; /* Navy blue background */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .view-btn:hover {
+    background-color: #d4af37; /* Gold hover effect */
+    transform: scale(1.1); /* Grow slightly on hover */
+  }
+  
+  /* Contact Section */
+  .contact {
+    text-align: center;
+    animation: slide-in 2s ease-out;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact input, .contact textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #283747; /* Navy border */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2d2d2d;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .contact input:hover, .contact textarea:hover {
+    background-color: #f4f7f6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+  }
+  
+  .contact button {
+    padding: 10px 20px;
+    background: #283747; /* Navy blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #d4af37;
+    transform: scale(1.05); /* Slight grow effect */
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px;
+    text-align: center;
+    color: rgb(143, 167, 187);
+    background-color: #223d5d;
+  }
+  
+  footer .social-links a {
+    color: #d4af37; /* Gold for social icons */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+  }
+  
+  footer .social-links a:hover {
+    color: #6c0303;
+  }
+  
